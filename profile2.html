@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/qrview.co/qr_code_white.png" />
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+     .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      float: right;
+      padding: 10px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px 4px;
+      margin-top: 20px; 
+      cursor: pointer;
+         
+    }
+    
+    @media screen and (max-width: 620px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+        #profile_link{
+            float: left;
+            width: 100%; 
+        }
+    }
+
+    @media screen and (min-width: 620px) {
+      .container {
+        width: 30rem;
+      }
+        
+    }
+    
+    body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=password], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.containerLeft {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 45%;
+  margin-left: 2.5%;
+  margin-top: 50px;
+  float: left;
+  position: absolute;
+}
+
+.containerRight {
+
+  width: 45%;
+  margin-top: 50px;
+  float: right;
+}
+
+.fixed {
+    position: fixed;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-right: 2.5%;
+    border-radius: 5px;
+    width: 40%;
+}
+
+</style>
+</head>
+<body>
+       
+</div>
+          
+        <div class="containerLeft">
+
+            <h2 style="margin-top: 10px; color: #0077b4;">LinkedIn Profile Form:</h2>
+
+        <form id="form" action = "">
+            <label>1) What industry are you in?</label>
+            <input type="text" id="industry" name="industry" value =""></input>
+
+            <label>2) What are your industry keywords?</label>
+            <input type="text" name="industry_keywords" id="industry_keywords"  value =""></input>
+
+            <label>3) What services do you provide? What are 2-3 major industry trends your company addresses and solves? Try to use industry keywords here.</label>
+            <textarea rows="8" style="resize: vertical;" name="ourservice" id="ourservice"  value =""></textarea>  
+            
+            <label>4) Why do your customers need your service? What are some pain points you solve?</label>
+            <textarea rows="6" name="painpoints" id="painpoints"  value =""></textarea>
+
+            <label>5) What are your key benefits? List from best to last.</label>
+            <textarea rows="4" id="keybenefits" name="keybenefits" id="keybenefits"  value =""></textarea>
+
+            <label>6) Why should potential customers choose you? What makes you better than your competitors?</label>
+            <textarea rows="4" name="betterthancompetitors" id="betterthancompetitors"  value =""></textarea>
+
+            <label>7) Who is your ideal customer? (If you already have big customers please list them)</label>
+            <textarea rows="4" name="yourcustomers" id="yourcustomers"  value =""></textarea>    
+
+            <!-- KEY BENEFTIS -->
+
+            <label>8) What are some measurable results you can guarantee your customers?</label>
+            <input type="text" name="results1" id="results1"  value =""></input>
+            <input type="text" name="results2" id="results2"  value =""></input>
+            <input type="text" name="results3" id="results3"  value =""></input>
+            <input type="text" name="results4" id="results4"  value =""></input>
+            <input type="text" name="results5" id="results5"  value =""></input>
+            <input type="text" name="results6" id="results6"  value =""></input>
+
+
+            <label>9) What is your CTA? (Example: check out our website, schedule a demo, or start a free trial, etc.)</label>
+            <textarea name="CTA" id="CTA"  value =""></textarea>
+
+            <label>10) How can potential customers contact you?</label>
+            <textarea name="yourcontactinfo" id="yourcontactinfo"  value =""></textarea>
+            
+        <input id="submit" type="submit" value="Update">
+        </form>
+            
+        </div>
+				
+		<div class="containerRight">
+            <div class="fixed">
+            
+        <h2 style="margin-top: 10px; color: #0077b4;">LinkedIn Template:</h2>
+
+        
+                    
+                
+                <p>OUR SERVICE:</p>
+                    <span id="ourservicespan"></span>
+                    <br><br>
+                    <span id="painpoints_span"></span>
+                    
+                <p>KEY BENEFTITS:</p>
+                    <span id="keyfeatures"></span>
+
+                <p>WHY CHOOSE US?</p>
+                    <span id="whychooseus"></span>
+
+                <p>OUR CUSTOMERS:</p>
+                    <span id="customers"></span>
+
+                <p>RESULTS:</p>
+                <span style="display: none" id="check1">&#9989; </span><span id="results_span1"></span><br>
+                <span style="display: none" id="check2">&#9989; </span><span id="results_span2"></span><br>
+                <span style="display: none" id="check3">&#9989; </span><span id="results_span3"></span><br>
+                <span style="display: none" id="check4">&#9989; </span><span id="results_span4"></span><br>
+                <span style="display: none" id="check5">&#9989; </span><span id="results_span5"></span><br>
+                <span style="display: none" id="check6">&#9989; </span><span id="results_span6"></span><br>
+
+                <p></p>
+                    <span id="CTA_here"></span>
+
+                <p>CONTACT ME:</p>
+                    <span id="contactme"></span>
+
+        </div>
+            
+        </div>
+
+   
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    // Question #3 // 
+    $("#ourservice").on('input', function(){
+        const ourservicetext = this.value;
+        $("#ourservicespan").text(ourservicetext)
+    });
+
+    // Question #4 //
+    $("#painpoints").on('input', function(){
+        const painpointstext = this.value;
+        $("#painpoints_span").text(painpointstext)
+    });
+
+    // Question #5 //
+    $("#keybenefits").on('input', function(){
+        const keybenefitstext = this.value;
+        $("#keyfeatures").text(keybenefitstext)
+    });
+
+    // Question #6 //
+    $("#betterthancompetitors").on('input', function(){
+        const betterthancompetitorstext = this.value;
+        $("#whychooseus").text(betterthancompetitorstext)
+    });
+
+    // Question #7 //
+    $("#yourcustomers").on('input', function(){
+        const yourcustomerstext = this.value;
+        $("#customers").text(yourcustomerstext)
+    });
+
+    // Question #8 //
+    $("#keybenefits").on('input', function(){
+        const keybenefitstext = this.value;
+        $("#keyfeatures").text(keybenefitstext)
+    });
+
+    // Question #9 //
+    
+    $("#results1").on('input', function(){
+        var resultstext = this.value;
+        $("#results_span1").text(resultstext)
+        if (resultstext != '') {
+            $('#check1').show();
+        } else $('#check1').hide();
+    });
+
+    $("#results2").on('input', function(){
+        var resultstext = this.value;
+        $("#results_span2").text(resultstext)
+        if (resultstext != '') {
+            $('#check2').show();
+        } else $('#check2').hide();
+    });
+
+    $("#results3").on('input', function(){
+        var resultstext = this.value;
+        $("#results_span3").text(resultstext)
+        if (resultstext != '') {
+            $('#check3').show();
+        } else $('#check3').hide();
+    });
+
+    $("#results4").on('input', function(){
+        var resultstext = this.value;
+        $("#results_span4").text(resultstext)
+        if (resultstext != '') {
+            $('#check4').show();
+        } else $('#check4').hide();
+    });
+
+    $("#results5").on('input', function(){
+        var resultstext = this.value;
+        $("#results_span5").text(resultstext)
+        if (resultstext != '') {
+            $('#check5').show();
+        } else $('#check5').hide();
+    });
+
+    $("#results6").on('input', function(){
+        var resultstext = this.value;
+        $("#results_span6").text(resultstext)
+        if (resultstext != '') {
+            $('#check6').show();
+        } else $('#check6').hide();
+    });
+
+    // Question #11 //
+    $("#CTA").on('input', function(){
+        const CTAtext = this.value;
+        $("#CTA_here").text(CTAtext)
+    });
+
+    // Question #12 //
+    $("#yourcontactinfo").on('input', function(){
+        const yourcontactinfotext = this.value;
+        $("#contactme").text(yourcontactinfotext)
+    });
+
+});
+</script>
+
+
+</body>
+</html>
